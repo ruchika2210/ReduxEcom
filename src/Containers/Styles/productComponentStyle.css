@@ -1,0 +1,54 @@
+/* productComponentStyle.css */
+
+/* Center the grid */
+.ui.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Default styles for cards */
+.ui.card {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px;
+  height: 100%;
+}
+
+.ui.card .content {
+  text-align: center;
+  padding: 10px;
+}
+
+.ui.card .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.ui.card .header,
+.ui.card .meta {
+  margin: 8px 0;
+}
+
+.ui.grid .four.column.row > .four.wide.column {
+  padding: 5px;
+}
+.ui.grid .four.column.row {
+  gap: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .ui.grid .four.column.row {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Auto-fill with min width 200px for screens up to 768px */
+  }
+}
